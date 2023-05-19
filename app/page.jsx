@@ -6,10 +6,10 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 // import '@scripts/script-static-page-1.js';
 
-export const metadata = {
-    title : "Homepage",
-    description : "nextJs demo Application"
-}
+// export const metadata = {
+//     title : "Homepage",
+//     description : "nextJs demo Application"
+// }
 
 
 const page = () => {
