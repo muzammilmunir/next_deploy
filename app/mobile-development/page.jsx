@@ -4,7 +4,7 @@ import '@styles/style-static-page-2.css';
 // import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 // import '@scripts/script-static-page-1.js';
 
 // export const metadata = {
