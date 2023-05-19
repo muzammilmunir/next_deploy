@@ -1,7 +1,7 @@
 'use client'
 
 import '@styles/style-static-page-2.css';
-import Head from 'next/head';
+// import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 // import { useEffect } from 'react';
@@ -26,14 +26,14 @@ const page2 = () => {
       }, []);
   return (
       <>
-      <Head>
+      {/* <Head>
         <title>Mobile Development</title>
         <meta 
         name='description'
         content='nextJs demo Application'
         key="desc"
         />
-      </Head>
+      </Head> */}
       {/* <!-- HERO SECTION --> */}
     <div className="hero-gradient p-48 rounded-b-[80px]">
         <p className="text-[24px] text-white font-medium mb-12 lowercase text-center">DIGITAL MARKETING THAT DRIVES REVENUE</p>
