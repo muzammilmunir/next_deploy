@@ -1,39 +1,42 @@
-'use client'
+// 'use client'
 
 import '@styles/style-static-page-2.css';
-// import Head from 'next/head';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect } from 'react';
+import Script from 'next/script';
+// import { useEffect } from 'react';
 // import '@scripts/script-static-page-1.js';
 
-// export const metadata = {
-//     title : "Mobile Development",
-//     description : "nextJs demo Application"
-// }
+export const metadata = {
+    title : "Mobile Development",
+    description : "nextJs demo Application"
+}
 
 
-const page2 = () => {
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = '/scripts/script-static-page-2.js';
-        script.async = true;
-        document.body.appendChild(script);
+const page2 = ({title,description}) => {
+    // useEffect(() => {
+    //     const script = document.createElement('script');
+    //     script.src = '/scripts/script-static-page-2.js';
+    //     script.async = true;
+    //     document.body.appendChild(script);
     
-        return () => {
-          document.body.removeChild(script);
-        };
-      }, []);
+    //     return () => {
+    //       document.body.removeChild(script);
+    //     };
+    //   }, []);
   return (
       <>
-      {/* <Head>
-        <title>Mobile Development</title>
+      <Head>
+        <title>{title}</title>
         <meta 
         name='description'
-        content='nextJs demo Application'
+        content={description}
         key="desc"
         />
-      </Head> */}
+      </Head>
+
+      <Script src='/scripts/script-static-page-2.js' strategy='lazyOnload'></Script>
       {/* <!-- HERO SECTION --> */}
     <div className="hero-gradient p-48 rounded-b-[80px]">
         <p className="text-[24px] text-white font-medium mb-12 lowercase text-center">DIGITAL MARKETING THAT DRIVES REVENUE</p>

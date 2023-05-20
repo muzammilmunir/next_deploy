@@ -1,30 +1,45 @@
-'use client'
+// 'use client'
 
 import '@styles/style-static-page-1.css';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect } from 'react';
+import Script from 'next/script';
+
+// import { useEffect } from 'react';
 // import '@scripts/script-static-page-1.js';
 
-// export const metadata = {
-//     title : "Homepage",
-//     description : "nextJs demo Application"
-// }
+export const metadata = {
+    title : "Homepage",
+    description : "nextJs demo Application"
+}
 
 
-const page = () => {
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = '/scripts/script-static-page-1.js';
-        script.async = true;
-        document.body.appendChild(script);
+const page = ({title,description}) => {
+    // useEffect(() => {
+    //     const script = document.createElement('script');
+    //     script.src = '/scripts/script-static-page-1.js';
+    //     script.async = true;
+    //     document.body.appendChild(script);
     
-        return () => {
-          document.body.removeChild(script);
-        };
-      }, []);
+    //     return () => {
+    //       document.body.removeChild(script);
+    //     };
+    //   }, []);
   return (
       <>
+
+      <Head>
+        <title>{title}</title>
+        <meta 
+        name='description'
+        content={description}
+        key="desc"
+        />
+      </Head>
+
+      <Script src='/scripts/script-static-page-1.js' strategy='lazyOnload'></Script>
+
       {/* <!-- HERO SECTION --> */}
     <div className="hero-gradient px-48 rounded-b-[80px]">
         <div className="flex items-center pt-20">
