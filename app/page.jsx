@@ -20,10 +20,10 @@ gsap.registerPlugin(ScrollTrigger);
 // import { useEffect } from 'react';
 // import '@scripts/script-static-page-1.js';
 
-export const metadata = {
-    title : "Homepage",
-    description : "nextJs demo Application"
-}
+// export const metadata = {
+//     title : "Homepage",
+//     description : "nextJs demo Application"
+// }
 
 export const stackAnimation = ()=>{
     let timeln = gsap.timeline({
@@ -114,7 +114,7 @@ export const stackAnimation = ()=>{
 }
 
 
-const page = ({title,description}) => {
+const page = () => {
 
     const main = useRef();
 
@@ -135,14 +135,14 @@ const page = ({title,description}) => {
   return (
       <>
 
-      <Head>
+      {/* <Head>
         <title>{title}</title>
         <meta 
         name='description'
         content={description}
         key="desc"
         />
-      </Head>
+      </Head> */}
 
       <Script src='/scripts/script-static-page-1.js' strategy='lazyOnload'></Script>
 
