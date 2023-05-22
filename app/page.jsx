@@ -191,7 +191,7 @@ const page = () => {
         </div>
         <div className="relative w-full mt-16 mb-24 cardStacks" ref={main}>
             <div className="absolute bg-[#FECE32] rounded-[64px] inset-x-0 h-[740px] cardStack-1">
-                <div className="flex items-center pt-16 px-32">
+                <div className="flex items-center pt-16 px-32 justify-between">
                     <div>
                         <p className="text-7xl text-white font-black max-w-[460px]">In House Technology</p>
                         <p className="text-2xl text-white font-normal max-w-[530px] my-11">Choose Expobird as your digital marketing agency and propel your business to new heights with our award-winning digital marketing services and proprietary technology platform.</p>
@@ -203,7 +203,7 @@ const page = () => {
                 </div>
             </div>
             <div className="absolute bg-[#FFAF77] rounded-[64px] inset-x-0 h-[740px] top-[30px] cardStack-2">
-                <div className="flex items-center pt-16 px-32">
+                <div className="flex items-center pt-16 px-32 justify-between">
                     <div>
                         <p className="text-7xl text-white font-black max-w-[460px]">In House Technology</p>
                         <p className="text-2xl text-white font-normal max-w-[530px] my-11">Choose Expobird as your digital marketing agency and propel your business to new heights with our award-winning digital marketing services and proprietary technology platform.</p>
@@ -215,7 +215,7 @@ const page = () => {
                 </div>
             </div>
             <div className="absolute bg-[#92ABFC] rounded-[64px] inset-x-0 h-[740px] top-[60px] cardStack-3">
-                <div className="flex items-center pt-16 px-32">
+                <div className="flex items-center pt-16 px-32 justify-between">
                     <div>
                         <p className="text-7xl text-white font-black max-w-[460px]">In House Technology</p>
                         <p className="text-2xl text-white font-normal max-w-[530px] my-11">Choose Expobird as your digital marketing agency and propel your business to new heights with our award-winning digital marketing services and proprietary technology platform.</p>
@@ -227,7 +227,7 @@ const page = () => {
                 </div>
             </div>
             <div className="relative bg-[#BA83E1] rounded-[64px] inset-x-0 h-[740px] top-[90px] cardStack-4">
-                <div className="flex items-center pt-16 px-32">
+                <div className="flex items-center pt-16 px-32 justify-between">
                     <div>
                         <p className="text-7xl text-white font-black max-w-[460px]">In House Technology</p>
                         <p className="text-2xl text-white font-normal max-w-[530px] my-11">Choose Expobird as your digital marketing agency and propel your business to new heights with our award-winning digital marketing services and proprietary technology platform.</p>
