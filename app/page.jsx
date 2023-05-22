@@ -1,10 +1,21 @@
-// 'use client'
+'use client'
 
 import '@styles/style-static-page-1.css';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Script from 'next/script';
+import { gsap } from 'gsap/dist/gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useRef,useEffect } from 'react';
+
+gsap.registerPlugin(ScrollTrigger);
+// import gsap from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+// import { stackAnimation } from "/lib/stack-animation.js";
+
+// gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
 
 // import { useEffect } from 'react';
 // import '@scripts/script-static-page-1.js';
@@ -14,8 +25,103 @@ export const metadata = {
     description : "nextJs demo Application"
 }
 
+export const stackAnimation = ()=>{
+    let timeln = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".cardStacks",
+            pin: true,
+            pinSpacing: true,
+            start: "left-=120px left",
+            end: "+=2000",
+            scrub: 2
+        }
+    });
+    
+    timeln.addLabel('card1');
+    timeln.to('.cardStack-1', {
+        yPercent: 0,
+        opacity: 1
+    });
+    
+    timeln.from('.cardStack-2', {
+        yPercent: 75,
+        opacity: 0
+    });
+    timeln.addLabel("card2");
+    
+    timeln.to(".cardStack-1", {
+        scale: 0.95,
+        yPercent: -7.5,
+        scrub: 2,
+    }, "-=0.5");
+    
+    timeln.to('.cardStack-2', {
+        yPercent: 0,
+        opacity: 1,
+        scrub: 2,
+    });
+    
+    timeln.from('.cardStack-3', {
+        yPercent: 75,
+        opacity: 0
+    });
+    timeln.addLabel('card3');
+    
+    timeln.to(".cardStack-1", {
+        scale: 0.90,
+        scrub: 2,
+    }, "-=0.5");
+    
+    timeln.to(".cardStack-2", {
+        scale: 0.95,
+        scrub: 2,
+        yPercent: -5,
+    }, "-=0.5");
+    
+    timeln.to(".cardStack-3", {
+        yPercent: 0,
+        opacity: 1,
+    });
+    
+    timeln.from('.cardStack-4', {
+        yPercent: 75,
+        opacity: 0,
+        scrub: 2,
+    });
+    timeln.addLabel('card3');
+    
+    timeln.to(".cardStack-1", {
+        scale: 0.85,
+        scrub: 2,
+    }, "-=0.5");
+    
+    timeln.to(".cardStack-2", {
+        scale: 0.90,
+        scrub: 2,
+    }, "-=0.5");
+    
+    timeln.to(".cardStack-3", {
+        scale: 0.95,
+        scrub: 2,
+        yPercent: -2.5,
+    }, "-=0.5");
+    
+    timeln.to(".cardStack-4", {
+        yPercent: 0,
+        opacity: 1,
+        scrub: 2,
+    });
+}
+
 
 const page = ({title,description}) => {
+
+    const main = useRef();
+
+    useEffect(()=>{
+        stackAnimation();
+    },[])
+
     // useEffect(() => {
     //     const script = document.createElement('script');
     //     script.src = '/scripts/script-static-page-1.js';
@@ -39,6 +145,8 @@ const page = ({title,description}) => {
       </Head>
 
       <Script src='/scripts/script-static-page-1.js' strategy='lazyOnload'></Script>
+
+
 
       {/* <!-- HERO SECTION --> */}
     <div className="hero-gradient px-48 rounded-b-[80px]">
@@ -81,11 +189,44 @@ const page = ({title,description}) => {
                 <li className="font-medium text-base text-[#878787] py-7 px-5">inhouse Technology</li>
             </ul>
         </div>
-        <div className="relative w-full mt-16 mb-24">
-            <div className="absolute bg-[#FECE32] rounded-[64px] scale-x-[85%] inset-x-0 h-[740px]"></div>
-            <div className="absolute bg-[#FFAF77] rounded-[64px] scale-x-90 inset-x-0 h-[740px] top-[30px]"></div>
-            <div className="absolute bg-[#92ABFC] rounded-[64px] scale-x-95 inset-x-0 h-[740px] top-[60px]"></div>
-            <div className="relative bg-[#BA83E1] rounded-[64px] scale-x-100 inset-x-0 h-[740px] top-[90px]">
+        <div className="relative w-full mt-16 mb-24 cardStacks" ref={main}>
+            <div className="absolute bg-[#FECE32] rounded-[64px] inset-x-0 h-[740px] cardStack-1">
+                <div className="flex items-center pt-16 px-32">
+                    <div>
+                        <p className="text-7xl text-white font-black max-w-[460px]">In House Technology</p>
+                        <p className="text-2xl text-white font-normal max-w-[530px] my-11">Choose Expobird as your digital marketing agency and propel your business to new heights with our award-winning digital marketing services and proprietary technology platform.</p>
+                        {/* <!-- <p className="text-[#a769d380] font-black text-9xl">2x Revenue</p> --> */}
+                    </div>
+                    <div>
+                        <Image src="/assets/images/benefits.webp.png" width={749} height={598} alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div className="absolute bg-[#FFAF77] rounded-[64px] inset-x-0 h-[740px] top-[30px] cardStack-2">
+                <div className="flex items-center pt-16 px-32">
+                    <div>
+                        <p className="text-7xl text-white font-black max-w-[460px]">In House Technology</p>
+                        <p className="text-2xl text-white font-normal max-w-[530px] my-11">Choose Expobird as your digital marketing agency and propel your business to new heights with our award-winning digital marketing services and proprietary technology platform.</p>
+                        {/* <!-- <p className="text-[#a769d380] font-black text-9xl">2x Revenue</p> --> */}
+                    </div>
+                    <div>
+                        <Image src="/assets/images/benefits.webp.png" width={749} height={598} alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div className="absolute bg-[#92ABFC] rounded-[64px] inset-x-0 h-[740px] top-[60px] cardStack-3">
+                <div className="flex items-center pt-16 px-32">
+                    <div>
+                        <p className="text-7xl text-white font-black max-w-[460px]">In House Technology</p>
+                        <p className="text-2xl text-white font-normal max-w-[530px] my-11">Choose Expobird as your digital marketing agency and propel your business to new heights with our award-winning digital marketing services and proprietary technology platform.</p>
+                        {/* <!-- <p className="text-[#a769d380] font-black text-9xl">2x Revenue</p> --> */}
+                    </div>
+                    <div>
+                        <Image src="/assets/images/benefits.webp.png" width={749} height={598} alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div className="relative bg-[#BA83E1] rounded-[64px] inset-x-0 h-[740px] top-[90px] cardStack-4">
                 <div className="flex items-center pt-16 px-32">
                     <div>
                         <p className="text-7xl text-white font-black max-w-[460px]">In House Technology</p>
