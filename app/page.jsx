@@ -358,13 +358,16 @@ const page = () => {
     </div>
 
     {/* <!-- Our Work--> */}
-    <div className="px-48 my-48">
+    <div className="px-48 my-48 relative">
         <div className="flex items-center">
             <div>
                 <p className="text-[#171A46] text-[180px] font-black">Our</p>
             </div>
             <div>
-                <Image src="/assets/images/work-image.png" width={698} height={797}  alt=""/>
+                <Image src="/assets/images/work-image1.png" className='relative top-0' width={698} height={797}  alt=""/>
+                <Image src="/assets/images/work-image2.png" className='absolute top-0 -z-10' width={698} height={797}  alt=""/>
+                <Image src="/assets/images/work-image3.png" className='absolute top-0 -z-20' width={698} height={797}  alt=""/>
+                <Image src="/assets/images/work-image4.png" className='absolute top-0 -z-30' width={698} height={797}  alt=""/>
             </div>
             <div>
                 <p className="text-[#171A46] text-[180px] font-black">Work</p>
