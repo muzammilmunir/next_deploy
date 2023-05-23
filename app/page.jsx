@@ -31,7 +31,7 @@ export const stackAnimation = ()=>{
             trigger: ".cardStacks",
             pin: true,
             pinSpacing: true,
-            start: "left-=120px left",
+            start: "left-=20px left",
             end: "+=2000",
             scrub: 2
         }
@@ -41,6 +41,10 @@ export const stackAnimation = ()=>{
     timeln.to('.cardStack-1', {
         yPercent: 0,
         opacity: 1
+    });
+    timeln.from(".button-1", {
+        backgroundColor: '#BA83E1',
+        color: "#FFF",
     });
     
     timeln.from('.cardStack-2', {
@@ -54,6 +58,16 @@ export const stackAnimation = ()=>{
         yPercent: -7.5,
         scrub: 2,
     }, "-=0.5");
+    
+    timeln.to(".button-1", {
+        backgroundColor: 'transparent',
+        color: "#878787",
+    });
+    
+    timeln.to(".button-2", {
+        backgroundColor: '#BA83E1',
+        color: "#FFF",
+    });
     
     timeln.to('.cardStack-2', {
         yPercent: 0,
@@ -71,6 +85,16 @@ export const stackAnimation = ()=>{
         scale: 0.90,
         scrub: 2,
     }, "-=0.5");
+    
+    timeln.to(".button-2", {
+        backgroundColor: 'transparent',
+        color: "#878787",
+    });
+    
+    timeln.to(".button-3", {
+        backgroundColor: '#BA83E1',
+        color: "#FFF",
+    });
     
     timeln.to(".cardStack-2", {
         scale: 0.95,
@@ -105,6 +129,16 @@ export const stackAnimation = ()=>{
         scrub: 2,
         yPercent: -2.5,
     }, "-=0.5");
+    
+    timeln.to(".button-3", {
+        backgroundColor: 'transparent',
+        color: "#878787",
+    });
+    
+    timeln.to(".button-4", {
+        backgroundColor: '#BA83E1',
+        color: "#FFF",
+    });
     
     timeln.to(".cardStack-4", {
         yPercent: 0,
@@ -149,7 +183,7 @@ const page = () => {
 
 
       {/* <!-- HERO SECTION --> */}
-    <div className="hero-gradient px-48 rounded-b-[80px]">
+    <div className="hero-gradient px-48 rounded-b-[80px] mb-24">
         <div className="flex items-center pt-20">
             <div>
                 <p className="text-2xl text-white font-medium mb-12">digital marketing that brings revenue</p>
@@ -179,17 +213,17 @@ const page = () => {
     </div>
     
     {/* <!-- Your search ends here  --> */}
-    <div className="px-20 my-24 relative">
+    <div className="px-20 mb-24 relative cardStacks" ref={main}>
         <p className="text-center text-6xl font-black text-[#171A46]">Your search ends here</p>
         <div className="mt-12">
-            <ul className="flex items-center justify-center gap-x-24">
-                <li className="font-medium text-base text-white py-7 px-5 bg-[#BA83E1] rounded-[58px]">500+ Digital activity</li>
-                <li className="font-medium text-base text-[#878787] py-7 px-5">25-years track Record</li>
-                <li className="font-medium text-base text-[#878787] py-7 px-5">1,000s of Reviews</li>
-                <li className="font-medium text-base text-[#878787] py-7 px-5">inhouse Technology</li>
+            <ul class="flex items-center justify-center gap-x-24">
+                <li class="font-medium text-base text-[#878787] py-7 px-5 button-1 rounded-[58px]">500+ Digital activity</li>
+                <li class="font-medium text-base text-[#878787] py-7 px-5 button-2 rounded-[58px]">25-years track Record</li>
+                <li class="font-medium text-base text-[#878787] py-7 px-5 button-3 rounded-[58px]">1,000s of Reviews</li>
+                <li class="font-medium text-base text-[#878787] py-7 px-5 button-4 rounded-[58px]">inhouse Technology</li>
             </ul>
         </div>
-        <div className="relative w-full mt-16 mb-24 cardStacks" ref={main}>
+        <div className="relative w-full mt-16 mb-24">
             <div className="absolute bg-[#FECE32] rounded-[64px] inset-x-0 h-[740px] cardStack-1">
                 <div className="flex items-center pt-16 px-32 justify-between">
                     <div>
