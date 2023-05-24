@@ -8,6 +8,7 @@ import Script from "next/script";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useRef, useEffect } from "react";
+import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
 // import gsap from "gsap";
@@ -221,13 +222,215 @@ export const flyCardAnimation = () => {
   });
 };
 
+
+export const sideChangeAnimation = () => {
+  let timeln = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".technology-gradient",
+      start: "top+=250px bottom",
+      end : "top top",
+      scrub : 2,
+      immediateRender : false 
+    },
+  });
+
+  timeln.to(".sideChangeImage", {
+    xPercent: -116,
+    yPercent: 181,
+    scrub:2
+  });
+
+}
+
+export const fadeUpAnimation = () =>{
+  const textAnimation1 = new SplitType('p.textAnimation1', { types: 'chars' });
+  const chars1 = textAnimation1.chars;
+  const textAnimation2 = new SplitType('p.textAnimation2', { types: 'chars' });
+  const chars2 = textAnimation2.chars;
+
+  const textAnimation3 = new SplitType('p.textAnimation3', { types: 'chars' });
+  const chars3 = textAnimation3.chars;
+  const textAnimation4 = new SplitType('p.textAnimation4', { types: 'chars' });
+  const chars4 = textAnimation4.chars;
+
+  const textAnimation5 = new SplitType('p.textAnimation5', { types: 'chars' });
+  const chars5 = textAnimation5.chars;
+  const textAnimation6 = new SplitType('p.textAnimation6', { types: 'chars' });
+  const chars6 = textAnimation6.chars;
+
+  const textAnimation7 = new SplitType('p.textAnimation7', { types: 'chars' });
+  const chars7 = textAnimation7.chars;
+  const textAnimation8 = new SplitType('p.textAnimation8', { types: 'chars' });
+  const chars8 = textAnimation8.chars;
+
+  let timeln1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".text-animation1",
+      start: "top+=500px bottom",
+      end : "top top",
+      scrub : 2,
+    },
+  });
+
+  timeln1.fromTo(
+    chars1,
+    { 
+      y: 100,
+      opacity: 0
+    },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.05,
+      duration: 3,
+      ease: 'power4.out',
+    }
+  )
+
+  timeln1.fromTo(
+   chars2,
+    { 
+      y: 100,
+      opacity: 0
+    },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.05,
+      duration: 3,
+      ease: 'power4.out',
+    }
+  )
+
+  let timeln2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".text-animation2",
+      start: "top+=500px bottom",
+      end : "top top",
+      scrub : 2,
+    },
+  });
+
+  timeln2.fromTo(
+    chars3,
+    { 
+      y: 100,
+      opacity: 0
+    },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.05,
+      duration: 3,
+      ease: 'power4.out',
+    }
+  )
+
+  timeln2.fromTo(
+   chars4,
+    { 
+      y: 100,
+      opacity: 0
+    },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.05,
+      duration: 3,
+      ease: 'power4.out',
+    }
+  )
+
+  let timeln3 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".text-animation3",
+      start: "top+=500px bottom",
+      end : "top top",
+      scrub : 2,
+    },
+  });
+
+  timeln3.fromTo(
+    chars5,
+    { 
+      y: 100,
+      opacity: 0
+    },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.05,
+      duration: 3,
+      ease: 'power4.out',
+    }
+  )
+
+  timeln3.fromTo(
+   chars6,
+    { 
+      y: 100,
+      opacity: 0
+    },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.05,
+      duration: 3,
+      ease: 'power4.out',
+    }
+  )
+
+  let timeln4 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".text-animation4",
+      start: "top+=500px bottom",
+      end : "top top",
+      scrub : 2,
+    },
+  });
+
+  timeln4.fromTo(
+    chars7,
+    { 
+      y: 100,
+      opacity: 0
+    },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.05,
+      duration: 3,
+      ease: 'power4.out',
+    }
+  )
+
+  timeln4.fromTo(
+   chars8,
+    { 
+      y: 100,
+      opacity: 0
+    },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.05,
+      duration: 3,
+      ease: 'power4.out',
+    }
+  )
+
+}
 const page = () => {
   const main = useRef();
   const main2 = useRef();
+  const main3 = useRef();
+  const main4 = useRef();
 
   useEffect(() => {
     stackAnimation();
     flyCardAnimation();
+    sideChangeAnimation();
+    fadeUpAnimation();
   }, []);
 
   // useEffect(() => {
@@ -723,7 +926,7 @@ const page = () => {
       </div>
 
       {/* <!-- Our Work--> */}
-      <div className="px-48 my-48 relative flyCardStacks" ref={main}>
+      <div className="px-48 my-48 relative flyCardStacks" ref={main2}>
         <div className="flex items-center justify-between">
           <div>
             <p className="text-[#171A46] text-[180px] font-black">Our</p>
@@ -792,7 +995,7 @@ const page = () => {
       </div>
 
       {/* <!-- In House Technology --> */}
-      <div>
+      <div ref={main3}>
         <div className="grid grid-cols-2 items-center gap-x-24 px-48">
           <div>
             <p className="text-[80px] text-[#171A46] font-black leading-none">
@@ -810,18 +1013,19 @@ const page = () => {
               width={749}
               height={598}
               alt=""
+              className="sideChangeImage"
             />
           </div>
         </div>
         <div className="technology-gradient pt-96">
           <div className="grid grid-cols-2 items-center gap-x-24 px-48">
-            <div>
-              <Image
+            <div className="w-[749px] h-[598px]">
+              {/* <Image
                 src="/assets/images/benefits.webp.png"
                 width={749}
                 height={598}
                 alt=""
-              />
+              /> */}
             </div>
             <div>
               <p className="text-[80px] text-white font-black leading-none">
@@ -995,13 +1199,13 @@ const page = () => {
       </div>
 
       {/* <!-- Pay as --> */}
-      <div className="numbers-gradient py-48">
+      <div className="numbers-gradient py-48 text-animation1" ref={main4}>
         <div className="grid grid-flow-row grid-cols-4">
           <div className="col-span-2 col-start-1 ml-[100px]">
-            <p className="text-white font-black text-[250px]">Pay as</p>
+            <p className="text-white font-black text-[250px] textAnimation1">Pay as</p>
           </div>
           <div className="col-span-3 col-start-2">
-            <p className="text-white font-black text-[250px]">you grow</p>
+            <p className="text-white font-black text-[250px] textAnimation2">you grow</p>
           </div>
           <div className="col-span-2 max-w-[577px] ml-[100px] mt-[150px]">
             <p className="text-white text-[24px]">
@@ -1012,13 +1216,13 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="numbers-gradient py-48">
+      <div className="numbers-gradient py-48 text-animation2" ref={main4}>
         <div className="grid grid-flow-row grid-cols-4">
           <div className="col-span-3 col-start-2">
-            <p className="text-white font-black text-[250px]">Effortless</p>
+            <p className="text-white font-black text-[250px] textAnimation3">Effortless</p>
           </div>
           <div className="col-span-3 col-start-1 ml-[100px]">
-            <p className="text-white font-black text-[250px]">adoption</p>
+            <p className="text-white font-black text-[250px] textAnimation4">adoption</p>
           </div>
           <div className="col-span-2 max-w-[577px] mt-[150px] col-start-3 ml-[100px]">
             <p className="text-white text-[24px] text-right">
@@ -1029,13 +1233,13 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="numbers-gradient py-48">
+      <div className="numbers-gradient py-48 text-animation3" ref={main4}>
         <div className="grid grid-flow-row grid-cols-4">
           <div className="col-span-3 col-start-1 ml-[100px]">
-            <p className="text-white font-black text-[250px]">All sales</p>
+            <p className="text-white font-black text-[250px] textAnimation5">All sales</p>
           </div>
           <div className="col-span-3 col-start-2">
-            <p className="text-white font-black text-[250px]">compatible</p>
+            <p className="text-white font-black text-[250px] textAnimation6">compatible</p>
           </div>
           <div className="col-span-2 max-w-[577px] ml-[100px] mt-[150px]">
             <p className="text-white text-[24px]">
@@ -1046,13 +1250,13 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="numbers-gradient py-48">
+      <div className="numbers-gradient py-48 text-animation4" ref={main4}>
         <div className="grid grid-flow-row grid-cols-4">
           <div className="col-span-3 col-start-2">
-            <p className="text-white font-black text-[250px]">Secure by</p>
+            <p className="text-white font-black text-[250px] textAnimation7">Secure by</p>
           </div>
           <div className="col-span-3 col-start-1 ml-[100px]">
-            <p className="text-white font-black text-[250px]">design</p>
+            <p className="text-white font-black text-[250px] textAnimation8">design</p>
           </div>
           <div className="col-span-2 max-w-[577px] mt-[150px] col-start-3 ml-[100px]">
             <p className="text-white text-[24px] text-right">
@@ -1460,4 +1664,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default page
