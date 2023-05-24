@@ -1,37 +1,37 @@
 
-// let index = 0;
+let index = 0;
   
-// let delay = 5000;
+let delay = 5000;
 
-// let $tabs = $('.divOfList .list');
+let $tabs = $('.divOfList > .list');
 
-// let $contents = $('.divOfContent');
+let $contents = $('.divOfContent');
 
-// let interval = setInterval(rotate, delay);
-// $('.item-1').addClass('active');
-// $('.list > .list-item').each(function (i) {
-//   $(this).click(function () {
-//     index = i;
-//     switchElement();
-//   });
-// });
-// function rotate() {
-//   index++;
-//   if (index >= $tabs.children('.list-item').length) {
-//     index = 0;
-//   }
-//   switchElement();
-// }
-// //switch tabs
-// function switchElement() {
-//   clearInterval(interval);
-//   $tabs.children('.list-item').removeClass('active');
-//   $('.divOfContent .section').fadeOut(300);
-//   let $tab = $tabs.children('.list-item').eq(index);
-//   $tab.addClass('active');
-//   $contents.children('.section').eq(index).delay(300).fadeIn(300);
-//   interval = setInterval(rotate, delay);
-// }
+let interval = setInterval(rotate, delay);
+$('.item-1').addClass('active');
+$('.list .list-items').each(function (i) {
+  $(this).click(function () {
+    index = i;
+    switchElement();
+  });
+});
+function rotate() {
+  index++;
+  if (index >= $tabs.children('.list-items').length) {
+    index = 0;
+  }
+  switchElement();
+}
+//switch tabs
+function switchElement() {
+  clearInterval(interval);
+  $tabs.children('.list-items').removeClass('active');
+  $('.divOfContent .auto-sections').fadeOut(300);
+  let $tab = $tabs.children('.list-items').eq(index);
+  $tab.addClass('active');
+  $contents.children('.auto-sections').eq(index).delay(300).fadeIn(300);
+  interval = setInterval(rotate, delay);
+}
 
 "use strict";
 
