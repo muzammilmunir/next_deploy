@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 "use strict";
 
 const items = document.querySelectorAll(".accordion button");
@@ -37,3 +39,16 @@ window.addEventListener("scroll", () => {
 window.addEventListener("resize", () => {
   spaceHolder.style.height = `${calcDynamicHeight(horizontal)}px`;
 });
+
+let timeln2 = gsap.timeline();
+
+timeln2.to(".text-change",{
+  color : "white",
+  scrollTrigger:{
+      trigger: '.brain-image',
+      start: "top+=500px bottom",
+      end : "bottom bottom",
+      scrub : 2,
+      immediateRender : false 
+  },
+})

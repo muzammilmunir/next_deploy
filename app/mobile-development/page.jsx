@@ -46,19 +46,19 @@ const page2 = ({title,description}) => {
             <button className="text-[#171B47] text-base bg-[#FF9E44] rounded-[70px] py-4 px-9">Contact Us <span><Image src="/assets/images/arrow-black.png" width={12} height={12} className="inline" alt=""/></span></button>
         </div>
     </div>
-    <div className="px-48 relative bottom-[100px]">
-        <div className="flex justify-center">
-            <div className="w-[427px] h-[427px] bg-[#92ABFC] rounded-[34px] rotate-[10.36deg] flex items-center justify-center">
+    <div className="relative bottom-[100px]">
+        <div className="card-holder h-[500px]" data-inviewport>
+            <div className="w-[427px] h-[427px] bg-[#92ABFC] rounded-[34px] rotate-[10.36deg] flex items-center justify-center jcard1">
                 <Image src="/assets/images/mobiles.png" width={302} height={376} alt=""/>
             </div>
-            <div className="w-[427px] h-[427px] bg-[#BA83E1] rounded-[34px] -rotate-[8.6deg] flex items-center justify-center">
-                <Image src="/assets/images/mobiles2.png" width={325} height={369} alt=""/>
+            <div className="w-[427px] h-[427px] bg-[#BA83E1] rounded-[34px] -rotate-[8.6deg] flex items-center justify-center jcard2">
+                <Image src="/assets/images/mobiles2.png" width={320} height={363} alt=""/>
             </div>
-            <div className="w-[427px] h-[427px] bg-[#FFAF77] rounded-[34px] rotate-[5.62deg] flex items-center justify-center">
-                <Image src="/assets/images/mobiles3.png" width={334} height={385} alt=""/>
+            <div className="w-[427px] h-[427px] bg-[#FFAF77] rounded-[34px] rotate-[5.62deg] flex items-center justify-center jcard3">
+                <Image src="/assets/images/mobiles3.png" width={320} height={369} alt=""/>
             </div>
-            <div className="w-[427px] h-[427px] bg-[#FED44B] rounded-[34px] -rotate-[6.62deg] flex items-center justify-center">
-                <Image src="/assets/images/mobiles4.png" width={325} height={344} alt=""/>
+            <div className="w-[427px] h-[427px] bg-[#FED44B] rounded-[34px] -rotate-[6.62deg] flex items-center justify-center jcard4">
+                <Image src="/assets/images/mobiles4.png" width={320} height={338} alt=""/>
             </div>
         </div>
     </div>
@@ -97,7 +97,7 @@ const page2 = ({title,description}) => {
                             <p className="text-[#5B5B5B] text-3xl font-bold">iOS Development</p>
                             <p className="text- text-[#878787] text-2xl my-5">This means that if you aim to enter the world of Apple apps</p>
                             <button className="p-6 border border-[#ADADAD] rounded-[16px]"><span><Image src="/assets/images/arrow-black.png" width={12} height={12} className="scale-75" alt=""/></span></button>
-                            <Image src="/assets/images/service-animation-02.png" width={240} height={168} style={{height: "237px"}} alt=""/>
+                            <Image src="/assets/images/service-animation-02.png" width={240} height={168} alt=""/>
                         </div>
                     </div>
                     <div className="px-6 py-20">
@@ -105,7 +105,7 @@ const page2 = ({title,description}) => {
                             <p className="text-[#5B5B5B] text-3xl font-bold">Custom <br/> Development</p>
                             <p className="text- text-[#878787] text-2xl my-5">Crafting engaging and flawless custom mobile apps is in our blood.</p>
                             <button className="p-6 border border-[#ADADAD] rounded-[16px]"><span><Image src="/assets/images/arrow-black.png" width={12} height={12} className="scale-75" alt=""/></span></button>
-                            <Image src="/assets/images/service-animation-04.png" width={276} height={169} className="mt-11" style={{height: "168px"}} alt=""/>
+                            <Image src="/assets/images/service-animation-04.png" width={276} height={169} className="mt-11" alt=""/>
                         </div>
                     </div>
             </div>
@@ -130,43 +130,43 @@ const page2 = ({title,description}) => {
 
     {/* <!-- DIFFICULTIES WE SOLVE --> */}
     <div className="technology-gradient">
-        <div className="grid grid-cols-2 items-center gap-x-24 px-48">
+        <div className="grid grid-cols-2 items-center gap-x-24 px-48 sectionFromTarget">
             <div>
                 <p className="text-[80px] text-[#171A46] font-black leading-none">DIFFICULTIES <br/>
                     WE SOLVE</p>
                 <p className="text-2xl text-[#878787] mt-11 max-w-[]">Mobile user experience is believed to have an abundance of usability issues that potentially cause an increase in uninstall rate. Employing user-centered design, we overpower challenges, offering users optimal usability and accessibility.</p>
             </div>
             <div>
-                <Image src="/assets/images/benefits2.png" width={355} height={722} className="mx-auto" alt=""/>
+                <Image src="/assets/images/benefits2.png" width={355} height={722} className="mx-auto sideChangeImage" alt=""/>
             </div>
         </div>
-        <div className="mt-48">
+        <div className="mt-24 sectionToTarget">
             <div className="grid px-48 grid-cols-12">
-                <div className="sticky h-fit z-50 top-0 col-span-6">
-                    <Image src="/assets/images/benefits2.png" width={355} height={722} alt=""/>
+                <div className="sticky h-fit z-50 top-0 col-span-6 pt-24">
+                    <Image src="/assets/images/benefits2.png" className='sideChangeImage2 opacity-0' width={355} height={722} alt=""/>
                 </div>
                 <div className="col-span-6">
-                    <div>
+                    <div className='sticky1'>
                         <p className="text-[80px] text-white font-black leading-none">Poor <br/> Onboarding</p>
                         <p className="text-2xl text-white mt-11">Reducing the number of steps and offering feature education throughout the onboarding, we instantly reveal the true value of your mobile app.</p>
                     </div>
-                    <div className="my-[260px]">
+                    <div className="my-[260px] sticky2">
                         <p className="text-[80px] text-white font-black leading-none">Complex <br/> Navigation</p>
                         <p className="text-2xl text-white mt-11">Playing around the main functionalities, keeping consistency, and communicating the current location, we streamline the navigation flow.</p>
                     </div>
-                    <div>
+                    <div className='sticky3'>
                         <p className="text-[80px] text-white font-black leading-none">Confusion</p>
                         <p className="text-2xl text-white mt-11">Prioritizing content and using progressive disclosure, we visualize the information that users need at each particular step of their journey.</p>
                     </div>
-                    <div className="my-[260px]">
+                    <div className="my-[260px] sticky4">
                         <p className="text-[80px] text-white font-black leading-none">Clutter</p>
                         <p className="text-2xl text-white mt-11">Prioritizing content and using progressive disclosure, we visualize the information that users need at each particular step of their journey.</p>
                     </div>
-                    <div>
+                    <div className='sticky5'>
                         <p className="text-[80px] text-white font-black leading-none">Small UI</p>
                         <p className="text-2xl text-white mt-11">Designing finger-friendly touch targets and choosing the right fonts and spacing, we create optimal legibility and easy interactions.</p>
                     </div>
-                    <div className="my-[260px]">
+                    <div className="my-[260px] sticky6">
                         <p className="text-[80px] text-white font-black leading-none">Proneness <br/>
                             To Errors</p>
                         <p className="text-2xl text-white mt-11">Designing finger-friendly touch targets and choosing the right fonts and spacing, we create optimal legibility and easy interactions.</p>
@@ -241,7 +241,7 @@ const page2 = ({title,description}) => {
         <div className="px-48 pt-48">
             <p className="font-black text-[80px] text-white text-center">By the numbers</p>
             <p className="text-[24px] text-white text-center py-[50px]">Choose Expobird as your digital marketing agency and propel your business to new heights with our award-winning digital marketing services and proprietary technology platform.</p>
-            <div className="text-center mb-[120px]"><button className="text-white bg-[#5D6BD9] rounded-[60px] px-[24px] py-[18px]">inhouse Technology <span><Image src="/assets/images/arrow-black.png" width={12} height={12} className="inline invert brightness-0" alt="" srcset=""/></span></button></div>
+            <div className="text-center mb-[120px]"><button className="text-white bg-[#5D6BD9] rounded-[60px] px-[24px] py-[18px]">inhouse Technology <span><Image src="/assets/images/arrow-black.png" width={12} height={12} className="inline invert brightness-0" alt=""/></span></button></div>
         </div>
         <div className="grid-cols-3 grid gap-x-[37px] numbers px-48 pb-48 relative z-50">
             <div className="col-span-1 bg-white px-[27px] py-[45px] rounded-[30px]">
@@ -325,7 +325,7 @@ const page2 = ({title,description}) => {
 
     {/* <!-- Testimonial --> */}
     <div className="p-48">
-        <Image src="/assets/images/testimonial.png" width={1120} height={551} className="mx-auto" alt="" srcset=""/>
+        <Image src="/assets/images/testimonial.png" width={1120} height={551} className="mx-auto" alt=""/>
         <div className="flex gap-x-[20px] justify-center mt-[50px] mb-[100px]">
             <div className="w-[70px] h-[70px] rounded-full bg-[#5D6BD9] flex justify-center items-center">
                 <Image src="/assets/images/arrow-purple.png" width={34} height={24} className="invert brightness-0 rotate-180" alt=""/>

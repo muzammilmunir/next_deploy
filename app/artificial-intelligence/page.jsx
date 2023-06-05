@@ -46,7 +46,7 @@ const page3 = ({title,description}) => {
             <button className="text-[#171B47] text-base bg-[#FF9E44] rounded-[70px] py-4 px-9">Contact Us <span><Image src="/assets/images/arrow-black.png" width={12} height={12} className="inline" alt=""/></span></button>
         </div>
         <div className="mix-blend-lighten relative">
-            <video src="/assets/videos/homepage-video.mp4" poster="/assets/images/homepage-fallback.jpg" muted="true" autoplay="true"/>
+            <video src="/assets/videos/homepage-video.mp4" poster="/assets/images/homepage-fallback.jpg" muted autoPlay={true} loop/>
             <Image src="/assets/images/homepage-fallback2.png" width={806} height={521} className="absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-1/4 z-50" alt=""/>
             <Image src="/assets/images/homepage-fallback3.png" width={724} height={492} className="absolute top-2/4 -translate-y-1/4 left-1/3 -translate-x-2/4" alt=""/>
         </div>
@@ -118,8 +118,8 @@ const page3 = ({title,description}) => {
     </div>
 
     {/* <!-- DIFFICULTIES WE SOLVE --> */}
-    <div className="technology-gradient">
-        <div className="grid grid-cols-2 items-center gap-x-24 px-48">
+    <div className="technology-gradient2">
+        {/* <div className="grid grid-cols-2 items-center gap-x-24 px-48">
             <div>
                 <p className="text-[80px] text-[#171A46] font-black leading-none">Solve your <br/> problems with AI</p>
                 <p className="text-2xl text-[#878787] mt-11 max-w-[]">Mobile user experience is believed to have an abundance of usability issues that potentially cause an increase in uninstall rate. Employing user-centered design, we overpower challenges, offering users optimal usability and accessibility.</p>
@@ -127,15 +127,22 @@ const page3 = ({title,description}) => {
             <div>
                 <Image src="/assets/images/brain.png" width={1128} height={1156} className="mx-auto" alt=""/>
             </div>
-        </div>
+        </div> */}
         <div className="mt-48">
-            <div className="grid px-48 grid-cols-12">
+            <div className="grid px-48 grid-cols-12 gap-x-32">
                 <div className="sticky h-fit z-50 top-0 col-span-6">
-                    <Image src="/assets/images/brain.png" width={1128} height={1156} alt=""/>
+                    {/* <Image src="/assets/images/brain.png" width={1128} height={1156} alt=""/> */}
+                    <div className='py-24'>
+                        <p className="text-[80px] text-[#171A46] font-black leading-none">Solve your <br/> problems with AI</p>
+                        <p className="text-2xl text-[#878787] mt-11 text-change">Mobile user experience is believed to have an abundance of usability issues that potentially cause an increase in uninstall rate. Employing user-centered design, we overpower challenges, offering users optimal usability and accessibility.</p>
+                    </div>
                 </div>
                 <div className="col-span-6">
+                    <div className='sticky h-fit top-0 -z-10'>
+                        <Image src="/assets/images/brain.png" width={1128} height={1156} className="mx-auto" alt=""/>
+                    </div>
                     <div>
-                        <p className="text-[80px] text-white font-black leading-none">Poor <br/> Onboarding</p>
+                        <p className="text-[80px] text-white font-black leading-none brain-image">Poor <br/> Onboarding</p>
                         <p className="text-2xl text-white mt-11">Reducing the number of steps and offering feature education throughout the onboarding, we instantly reveal the true value of your mobile app.</p>
                     </div>
                     <div className="my-[260px]">
@@ -164,7 +171,7 @@ const page3 = ({title,description}) => {
     </div>
 
     {/* AI Model */}
-    <div className="numbers-gradient pt-[100px]">
+    <div className="numbers-gradient pt-[100px] text-center">
         <p className="text-[80px] font-black text-white max-w-[1100px] mx-auto leading-none mb-[38px]">Integrate Your Business with Power of AI & ML</p>
         <p className="text-[24px] text-white max-w-[974px] mx-auto mb-[120px]">Choose Expobird as your digital marketing agency and propel your business to new heights with our award-winning digital marketing services and proprietary technology platform.</p>
         <Image src="/assets/images/ai-model.png" width={1920} height={926} className="mix-blend-lighten" alt=""/>
@@ -235,7 +242,7 @@ const page3 = ({title,description}) => {
         <div className="px-48 pt-48">
             <p className="font-black text-[80px] text-white text-center">By the numbers</p>
             <p className="text-[24px] text-white text-center py-[50px]">Choose Expobird as your digital marketing agency and propel your business to new heights with our award-winning digital marketing services and proprietary technology platform.</p>
-            <div className="text-center mb-[120px]"><button className="text-white bg-[#5D6BD9] rounded-[60px] px-[24px] py-[18px]">inhouse Technology <span><Image src="/assets/images/arrow-black.png" width={12} height={12} className="inline invert brightness-0" alt="" srcset=""/></span></button></div>
+            <div className="text-center mb-[120px]"><button className="text-white bg-[#5D6BD9] rounded-[60px] px-[24px] py-[18px]">inhouse Technology <span><Image src="/assets/images/arrow-black.png" width={12} height={12} className="inline invert brightness-0" alt=""/></span></button></div>
         </div>
         <div className="grid-cols-3 grid gap-x-[37px] numbers px-48 pb-48 relative z-50">
             <div className="col-span-1 bg-white px-[27px] py-[45px] rounded-[30px]">
@@ -319,7 +326,7 @@ const page3 = ({title,description}) => {
 
     {/* <!-- Testimonial --> */}
     <div className="p-48">
-        <Image src="/assets/images/testimonial.png" width={1120} height={551} className="mx-auto" alt="" srcset=""/>
+        <Image src="/assets/images/testimonial.png" width={1120} height={551} className="mx-auto" alt=""/>
         <div className="flex gap-x-[20px] justify-center mt-[50px] mb-[100px]">
             <div className="w-[70px] h-[70px] rounded-full bg-[#5D6BD9] flex justify-center items-center">
                 <Image src="/assets/images/arrow-purple.png" width={34} height={24} className="invert brightness-0 rotate-180" alt=""/>

@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 "use strict";
 
 const items = document.querySelectorAll(".accordion button");
@@ -37,3 +39,55 @@ window.addEventListener("scroll", () => {
 window.addEventListener("resize", () => {
   spaceHolder.style.height = `${calcDynamicHeight(horizontal)}px`;
 });
+
+let timeln2 = gsap.timeline();
+
+timeln2.to(".sideChangeImage",{
+  xPercent : -281,
+  yPercent : 126.6,
+  scrollTrigger:{
+      trigger: '.sticky',
+      start: "top-=100px bottom",
+      end : "bottom bottom",
+      scrub : 2,
+      immediateRender : false 
+  },
+})
+
+.to(".sideChangeImage",{
+  opacity : 0,
+  scrollTrigger:{
+      trigger: '.sticky',
+      start: "bottom-=1px bottom",
+      end : "bottom bottom",
+      scrub : true,
+      immediateRender : false 
+  },
+})
+
+.to(".sideChangeImage2",{
+  opacity : 1,
+  scrollTrigger:{
+      trigger: '.sticky',
+      start: "bottom-=1px bottom",
+      end : "bottom bottom",
+      scrub : true,
+      immediateRender : false 
+  },
+})
+
+const inViewport = (entries, observer) => {
+  entries.forEach(entry => { entry.target.classList.toggle("is-inviewport", entry.isIntersecting);
+  });
+  };
+  const Obs = new IntersectionObserver(inViewport);
+  const obsOptions = {};
+  const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
+  const jCard = document.querySelectorAll('.jcard');
+
+
+  ELs_inViewport.forEach((EL, i) => {
+  Obs.observe(EL, obsOptions);
+
+});
+

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="footer-gradient p-48">
         <div className="max-w-[1283px] mx-auto flex justify-between items-start">
-            <div><Image src="/assets/images/logo-white.png" width={105} height={61} alt="" srcset=""/></div>
+            <div><Image src="/assets/images/logo-white.png" width={105} height={61} alt=""/></div>
             <div>
                 <p className="text-[24px] text-white font-semibold">Follow us on</p>
                 <div className="flex items-center justify-between space-x-[36px] my-[24px]">

@@ -1,6 +1,6 @@
 import Footer from "@components/Footer"
 import Nav from "@components/Nav"
-
+import Script from "next/script";
 // export const metadata = {
 //     title : "Homepage",
 //     description : "nextJs demo Application"
@@ -15,7 +15,11 @@ const RootLayout = ({ children }) => {
                 {children}
                 <Footer/>
             </main>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
+            
+            <Script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></Script>
+            <Script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></Script>
+            <Script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></Script>
+            <Script src="https://unpkg.com/split-type"></Script>
         </body>
     </html>
   )

@@ -27,6 +27,10 @@ body{
   background:linear-gradient(180deg, rgba(147, 153, 233, 0) 0%, #9399E9 40.49%);
 }
 
+.technology-gradient2{
+  background:linear-gradient(180deg, rgba(147, 153, 233, 0) 0%, rgba(147, 153, 233, 0.7) 40.59%);
+}
+
 .underlined-svg::after{
   content: url(/assets/images/underlined.png);
   position: absolute;

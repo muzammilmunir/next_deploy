@@ -1,16 +1,16 @@
-"use client";
+// "use client";
 
 import "@styles/style-static-page-1.css";
-// import Head from 'next/head';
+import Head from 'next/head';
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
-import { gsap } from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useRef, useEffect } from "react";
-import SplitType from "split-type";
+// import { gsap } from "gsap/dist/gsap";
+// import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+// import { useRef } from "react";
+// import SplitType from "split-type";
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -21,417 +21,418 @@ gsap.registerPlugin(ScrollTrigger);
 // import { useEffect } from 'react';
 // import '@scripts/script-static-page-1.js';
 
-// export const metadata = {
-//     title : "Homepage",
-//     description : "nextJs demo Application"
-// }
+export const metadata = {
+    title : "Homepage",
+    description : "nextJs demo Application"
+}
 
 export const stackAnimation = () => {
-  let timeln = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".cardStacks",
-      pin: true,
-      pinSpacing: true,
-      start: "left-=20px left",
-      end: "+=2000",
-      scrub: 2,
-    },
-  });
+  // let timeln = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".cardStacks",
+  //     pin: true,
+  //     pinSpacing: true,
+  //     start: "left-=20px left",
+  //     end: "+=2000",
+  //     scrub: 2,
+  //   },
+  // });
 
-  timeln.addLabel("card1");
-  timeln.to(".cardStack-1", {
-    yPercent: 0,
-    opacity: 1,
-  });
-  timeln.from(".button-1", {
-    backgroundColor: "#BA83E1",
-    color: "#FFF",
-  });
+  // timeln.addLabel("card1");
+  // timeln.to(".cardStack-1", {
+  //   yPercent: 0,
+  //   opacity: 1,
+  // });
+  // timeln.from(".button-1", {
+  //   backgroundColor: "#BA83E1",
+  //   color: "#FFF",
+  // });
 
-  timeln.from(".cardStack-2", {
-    yPercent: 75,
-    opacity: 0,
-  });
-  timeln.addLabel("card2");
+  // timeln.from(".cardStack-2", {
+  //   yPercent: 75,
+  //   opacity: 0,
+  // });
+  // timeln.addLabel("card2");
 
-  timeln.to(
-    ".cardStack-1",
-    {
-      scale: 0.95,
-      yPercent: -7.5,
-      scrub: 2,
-    },
-    "-=0.5"
-  );
+  // timeln.to(
+  //   ".cardStack-1",
+  //   {
+  //     scale: 0.95,
+  //     yPercent: -7.5,
+  //     scrub: 2,
+  //   },
+  //   "-=0.5"
+  // );
 
-  timeln.to(".button-1", {
-    backgroundColor: "transparent",
-    color: "#878787",
-  });
+  // timeln.to(".button-1", {
+  //   backgroundColor: "transparent",
+  //   color: "#878787",
+  // });
 
-  timeln.to(".button-2", {
-    backgroundColor: "#BA83E1",
-    color: "#FFF",
-  });
+  // timeln.to(".button-2", {
+  //   backgroundColor: "#BA83E1",
+  //   color: "#FFF",
+  // });
 
-  timeln.to(".cardStack-2", {
-    yPercent: 0,
-    opacity: 1,
-    scrub: 2,
-  });
+  // timeln.to(".cardStack-2", {
+  //   yPercent: 0,
+  //   opacity: 1,
+  //   scrub: 2,
+  // });
 
-  timeln.from(".cardStack-3", {
-    yPercent: 75,
-    opacity: 0,
-  });
-  timeln.addLabel("card3");
+  // timeln.from(".cardStack-3", {
+  //   yPercent: 75,
+  //   opacity: 0,
+  // });
+  // timeln.addLabel("card3");
 
-  timeln.to(
-    ".cardStack-1",
-    {
-      scale: 0.9,
-      scrub: 2,
-    },
-    "-=0.5"
-  );
+  // timeln.to(
+  //   ".cardStack-1",
+  //   {
+  //     scale: 0.9,
+  //     scrub: 2,
+  //   },
+  //   "-=0.5"
+  // );
 
-  timeln.to(".button-2", {
-    backgroundColor: "transparent",
-    color: "#878787",
-  });
+  // timeln.to(".button-2", {
+  //   backgroundColor: "transparent",
+  //   color: "#878787",
+  // });
 
-  timeln.to(".button-3", {
-    backgroundColor: "#BA83E1",
-    color: "#FFF",
-  });
+  // timeln.to(".button-3", {
+  //   backgroundColor: "#BA83E1",
+  //   color: "#FFF",
+  // });
 
-  timeln.to(
-    ".cardStack-2",
-    {
-      scale: 0.95,
-      scrub: 2,
-      yPercent: -5,
-    },
-    "-=0.5"
-  );
+  // timeln.to(
+  //   ".cardStack-2",
+  //   {
+  //     scale: 0.95,
+  //     scrub: 2,
+  //     yPercent: -5,
+  //   },
+  //   "-=0.5"
+  // );
 
-  timeln.to(".cardStack-3", {
-    yPercent: 0,
-    opacity: 1,
-  });
+  // timeln.to(".cardStack-3", {
+  //   yPercent: 0,
+  //   opacity: 1,
+  // });
 
-  timeln.from(".cardStack-4", {
-    yPercent: 75,
-    opacity: 0,
-    scrub: 2,
-  });
-  timeln.addLabel("card4");
+  // timeln.from(".cardStack-4", {
+  //   yPercent: 75,
+  //   opacity: 0,
+  //   scrub: 2,
+  // });
+  // timeln.addLabel("card4");
 
-  timeln.to(
-    ".cardStack-1",
-    {
-      scale: 0.85,
-      scrub: 2,
-    },
-    "-=0.5"
-  );
+  // timeln.to(
+  //   ".cardStack-1",
+  //   {
+  //     scale: 0.85,
+  //     scrub: 2,
+  //   },
+  //   "-=0.5"
+  // );
 
-  timeln.to(
-    ".cardStack-2",
-    {
-      scale: 0.9,
-      scrub: 2,
-    },
-    "-=0.5"
-  );
+  // timeln.to(
+  //   ".cardStack-2",
+  //   {
+  //     scale: 0.9,
+  //     scrub: 2,
+  //   },
+  //   "-=0.5"
+  // );
 
-  timeln.to(
-    ".cardStack-3",
-    {
-      scale: 0.95,
-      scrub: 2,
-      yPercent: -2.5,
-    },
-    "-=0.5"
-  );
+  // timeln.to(
+  //   ".cardStack-3",
+  //   {
+  //     scale: 0.95,
+  //     scrub: 2,
+  //     yPercent: -2.5,
+  //   },
+  //   "-=0.5"
+  // );
 
-  timeln.to(".button-3", {
-    backgroundColor: "transparent",
-    color: "#878787",
-  });
+  // timeln.to(".button-3", {
+  //   backgroundColor: "transparent",
+  //   color: "#878787",
+  // });
 
-  timeln.to(".button-4", {
-    backgroundColor: "#BA83E1",
-    color: "#FFF",
-  });
+  // timeln.to(".button-4", {
+  //   backgroundColor: "#BA83E1",
+  //   color: "#FFF",
+  // });
 
-  timeln.to(".cardStack-4", {
-    yPercent: 0,
-    opacity: 1,
-    scrub: 2,
-  });
+  // timeln.to(".cardStack-4", {
+  //   yPercent: 0,
+  //   opacity: 1,
+  //   scrub: 2,
+  // });
 };
 
 export const flyCardAnimation = () => {
-  let timeln = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".flyCardStacks",
-      pin: true,
-      pinSpacing: true,
-      start: "left-=120px left",
-      end: "+=2000",
-      scrub: true,
-    },
-  });
+  // let timeln = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".flyCardStacks",
+  //     pin: true,
+  //     pinSpacing: true,
+  //     start: "left-=120px left",
+  //     end: "+=2000",
+  //     scrub: true,
+  //   },
+  // });
 
-  timeln.addLabel("flycard1");
-  timeln.from(".flyCard-1", {
-    yPercent: 0,
-    opacity: 1,
-  });
+  // timeln.addLabel("flycard1");
+  // timeln.from(".flyCard-1", {
+  //   yPercent: 0,
+  //   opacity: 1,
+  // });
 
-  timeln.addLabel("flycard2");
+  // timeln.addLabel("flycard2");
 
-  timeln.to(".flyCard-1", {
-    yPercent: -150,
-    rotation: 180,
-  });
+  // timeln.to(".flyCard-1", {
+  //   yPercent: -150,
+  //   rotation: 180,
+  // });
 
-  timeln.from(".flyCard-2", {
-    yPercent: 0,
-    opacity: 1,
-  });
+  // timeln.from(".flyCard-2", {
+  //   yPercent: 0,
+  //   opacity: 1,
+  // });
 
-  timeln.addLabel("flycard3");
+  // timeln.addLabel("flycard3");
 
-  timeln.to(".flyCard-2", {
-    yPercent: -150,
-    rotation: 180,
-  });
+  // timeln.to(".flyCard-2", {
+  //   yPercent: -150,
+  //   rotation: 180,
+  // });
 
-  timeln.from(".flyCard-3", {
-    yPercent: 0,
-    opacity: 1,
-  });
+  // timeln.from(".flyCard-3", {
+  //   yPercent: 0,
+  //   opacity: 1,
+  // });
 
-  timeln.addLabel("flycard4");
+  // timeln.addLabel("flycard4");
 
-  timeln.to(".flyCard-3", {
-    yPercent: -150,
-    rotation: 180,
-  });
+  // timeln.to(".flyCard-3", {
+  //   yPercent: -150,
+  //   rotation: 180,
+  // });
 };
 
 
 export const sideChangeAnimation = () => {
-  let timeln = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".technology-gradient",
-      start: "top+=250px bottom",
-      end : "top top",
-      scrub : 2,
-      immediateRender : false 
-    },
-  });
+  // let timeln = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".technology-gradient",
+  //     start: "top+=250px bottom",
+  //     end : "top top",
+  //     scrub : 2,
+  //     immediateRender : false 
+  //   },
+  // });
 
-  timeln.to(".sideChangeImage", {
-    xPercent: -116,
-    yPercent: 181,
-    scrub:2
-  });
+  // timeln.to(".sideChangeImage", {
+  //   xPercent: -116,
+  //   yPercent: 181,
+  //   scrub:2
+  // });
 
 }
 
 export const fadeUpAnimation = () =>{
-  const textAnimation1 = new SplitType('p.textAnimation1', { types: 'chars' });
-  const chars1 = textAnimation1.chars;
-  const textAnimation2 = new SplitType('p.textAnimation2', { types: 'chars' });
-  const chars2 = textAnimation2.chars;
+//   const textAnimation1 = new SplitType('p.textAnimation1', { types: 'chars' });
+//   const chars1 = textAnimation1.chars;
+//   const textAnimation2 = new SplitType('p.textAnimation2', { types: 'chars' });
+//   const chars2 = textAnimation2.chars;
 
-  const textAnimation3 = new SplitType('p.textAnimation3', { types: 'chars' });
-  const chars3 = textAnimation3.chars;
-  const textAnimation4 = new SplitType('p.textAnimation4', { types: 'chars' });
-  const chars4 = textAnimation4.chars;
+//   const textAnimation3 = new SplitType('p.textAnimation3', { types: 'chars' });
+//   const chars3 = textAnimation3.chars;
+//   const textAnimation4 = new SplitType('p.textAnimation4', { types: 'chars' });
+//   const chars4 = textAnimation4.chars;
 
-  const textAnimation5 = new SplitType('p.textAnimation5', { types: 'chars' });
-  const chars5 = textAnimation5.chars;
-  const textAnimation6 = new SplitType('p.textAnimation6', { types: 'chars' });
-  const chars6 = textAnimation6.chars;
+//   const textAnimation5 = new SplitType('p.textAnimation5', { types: 'chars' });
+//   const chars5 = textAnimation5.chars;
+//   const textAnimation6 = new SplitType('p.textAnimation6', { types: 'chars' });
+//   const chars6 = textAnimation6.chars;
 
-  const textAnimation7 = new SplitType('p.textAnimation7', { types: 'chars' });
-  const chars7 = textAnimation7.chars;
-  const textAnimation8 = new SplitType('p.textAnimation8', { types: 'chars' });
-  const chars8 = textAnimation8.chars;
+//   const textAnimation7 = new SplitType('p.textAnimation7', { types: 'chars' });
+//   const chars7 = textAnimation7.chars;
+//   const textAnimation8 = new SplitType('p.textAnimation8', { types: 'chars' });
+//   const chars8 = textAnimation8.chars;
 
-  let timeln1 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".text-animation1",
-      start: "top+=500px bottom",
-      end : "top top",
-      scrub : 2,
-    },
-  });
+//   let tln1 = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: ".text-animation1",
+//       start: "top+=500px bottom",
+//       end : "top top",
+//       scrub : 2,
+//     },
+//   });
 
-  timeln1.fromTo(
-    chars1,
-    { 
-      y: 100,
-      opacity: 0
-    },
-    {
-      y: 0,
-      opacity: 1,
-      stagger: 0.05,
-      duration: 3,
-      ease: 'power4.out',
-    }
-  )
+//   tln1.fromTo(
+//     chars1,
+//     { 
+//       y: 100,
+//       opacity: 0
+//     },
+//     {
+//       y: 0,
+//       opacity: 1,
+//       stagger: 0.05,
+//       duration: 3,
+//       ease: 'power4.out',
+//     }
+//   )
 
-  timeln1.fromTo(
-   chars2,
-    { 
-      y: 100,
-      opacity: 0
-    },
-    {
-      y: 0,
-      opacity: 1,
-      stagger: 0.05,
-      duration: 3,
-      ease: 'power4.out',
-    }
-  )
+//   tln1.fromTo(
+//    chars2,
+//     { 
+//       y: 100,
+//       opacity: 0
+//     },
+//     {
+//       y: 0,
+//       opacity: 1,
+//       stagger: 0.05,
+//       duration: 3,
+//       ease: 'power4.out',
+//     }
+//   )
 
-  let timeln2 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".text-animation2",
-      start: "top+=500px bottom",
-      end : "top top",
-      scrub : 2,
-    },
-  });
+//   let tln2 = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: ".text-animation2",
+//       start: "top+=500px bottom",
+//       end : "top top",
+//       scrub : 2,
+//     },
+//   });
 
-  timeln2.fromTo(
-    chars3,
-    { 
-      y: 100,
-      opacity: 0
-    },
-    {
-      y: 0,
-      opacity: 1,
-      stagger: 0.05,
-      duration: 3,
-      ease: 'power4.out',
-    }
-  )
+//   tln2.fromTo(
+//     chars3,
+//     { 
+//       y: 100,
+//       opacity: 0
+//     },
+//     {
+//       y: 0,
+//       opacity: 1,
+//       stagger: 0.05,
+//       duration: 3,
+//       ease: 'power4.out',
+//     }
+//   )
 
-  timeln2.fromTo(
-   chars4,
-    { 
-      y: 100,
-      opacity: 0
-    },
-    {
-      y: 0,
-      opacity: 1,
-      stagger: 0.05,
-      duration: 3,
-      ease: 'power4.out',
-    }
-  )
+//   tln2.fromTo(
+//    chars4,
+//     { 
+//       y: 100,
+//       opacity: 0
+//     },
+//     {
+//       y: 0,
+//       opacity: 1,
+//       stagger: 0.05,
+//       duration: 3,
+//       ease: 'power4.out',
+//     }
+//   )
 
-  let timeln3 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".text-animation3",
-      start: "top+=500px bottom",
-      end : "top top",
-      scrub : 2,
-    },
-  });
+//   let tln3 = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: ".text-animation3",
+//       start: "top+=500px bottom",
+//       end : "top top",
+//       scrub : 2,
+//     },
+//   });
 
-  timeln3.fromTo(
-    chars5,
-    { 
-      y: 100,
-      opacity: 0
-    },
-    {
-      y: 0,
-      opacity: 1,
-      stagger: 0.05,
-      duration: 3,
-      ease: 'power4.out',
-    }
-  )
+//   tln3.fromTo(
+//     chars5,
+//     { 
+//       y: 100,
+//       opacity: 0
+//     },
+//     {
+//       y: 0,
+//       opacity: 1,
+//       stagger: 0.05,
+//       duration: 3,
+//       ease: 'power4.out',
+//     }
+//   )
 
-  timeln3.fromTo(
-   chars6,
-    { 
-      y: 100,
-      opacity: 0
-    },
-    {
-      y: 0,
-      opacity: 1,
-      stagger: 0.05,
-      duration: 3,
-      ease: 'power4.out',
-    }
-  )
+//   tln3.fromTo(
+//    chars6,
+//     { 
+//       y: 100,
+//       opacity: 0
+//     },
+//     {
+//       y: 0,
+//       opacity: 1,
+//       stagger: 0.05,
+//       duration: 3,
+//       ease: 'power4.out',
+//     }
+//   )
 
-  let timeln4 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".text-animation4",
-      start: "top+=500px bottom",
-      end : "top top",
-      scrub : 2,
-    },
-  });
+//   let tln4 = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: ".text-animation4",
+//       start: "top+=500px bottom",
+//       end : "top top",
+//       scrub : 2,
+//     },
+//   });
 
-  timeln4.fromTo(
-    chars7,
-    { 
-      y: 100,
-      opacity: 0
-    },
-    {
-      y: 0,
-      opacity: 1,
-      stagger: 0.05,
-      duration: 3,
-      ease: 'power4.out',
-    }
-  )
+//   tln4.fromTo(
+//     chars7,
+//     { 
+//       y: 100,
+//       opacity: 0
+//     },
+//     {
+//       y: 0,
+//       opacity: 1,
+//       stagger: 0.05,
+//       duration: 3,
+//       ease: 'power4.out',
+//     }
+//   )
 
-  timeln4.fromTo(
-   chars8,
-    { 
-      y: 100,
-      opacity: 0
-    },
-    {
-      y: 0,
-      opacity: 1,
-      stagger: 0.05,
-      duration: 3,
-      ease: 'power4.out',
-    }
-  )
+//   tln4.fromTo(
+//    chars8,
+//     { 
+//       y: 100,
+//       opacity: 0
+//     },
+//     {
+//       y: 0,
+//       opacity: 1,
+//       stagger: 0.05,
+//       duration: 3,
+//       ease: 'power4.out',
+//     }
+//   )
 
 }
-const page = () => {
-  const main = useRef();
-  const main2 = useRef();
-  const main3 = useRef();
-  const main4 = useRef();
 
-  useEffect(() => {
-    stackAnimation();
-    flyCardAnimation();
-    sideChangeAnimation();
-    fadeUpAnimation();
-  }, []);
+const page = (props) => {
+//   const main = useRef();
+//   const main2 = useRef();
+//   const main3 = useRef();
+//   const main4 = useRef();
+
+  // useEffect(() => {
+  //   stackAnimation();
+  //   flyCardAnimation();
+  //   sideChangeAnimation();
+  //   fadeUpAnimation();
+  // }, []);
 
   // useEffect(() => {
   //     const script = document.createElement('script');
@@ -445,14 +446,14 @@ const page = () => {
   //   }, []);
   return (
     <>
-      {/* <Head>
-        <title>{title}</title>
+      <Head>
+        <title>{props.title}</title>
         <meta 
         name='description'
-        content={description}
+        content={props.description}
         key="desc"
         />
-      </Head> */}
+      </Head>
 
       <Script
         src="/scripts/script-static-page-1.js"
@@ -548,22 +549,22 @@ const page = () => {
       </div>
 
       {/* <!-- Your search ends here  --> */}
-      <div className="px-20 mb-24 relative cardStacks" ref={main}>
+      <div className="px-20 mb-24 relative cardStacks"  >
         <p className="text-center text-6xl font-black text-[#171A46]">
           Your search ends here
         </p>
         <div className="mt-12">
-          <ul class="flex items-center justify-center gap-x-24">
-            <li class="font-medium text-base text-[#878787] py-7 px-5 button-1 rounded-[58px]">
+          <ul className="flex items-center justify-center gap-x-24">
+            <li className="font-medium text-base text-[#878787] py-7 px-5 button-1 rounded-[58px]">
               500+ Digital activity
             </li>
-            <li class="font-medium text-base text-[#878787] py-7 px-5 button-2 rounded-[58px]">
+            <li className="font-medium text-base text-[#878787] py-7 px-5 button-2 rounded-[58px]">
               25-years track Record
             </li>
-            <li class="font-medium text-base text-[#878787] py-7 px-5 button-3 rounded-[58px]">
+            <li className="font-medium text-base text-[#878787] py-7 px-5 button-3 rounded-[58px]">
               1,000s of Reviews
             </li>
-            <li class="font-medium text-base text-[#878787] py-7 px-5 button-4 rounded-[58px]">
+            <li className="font-medium text-base text-[#878787] py-7 px-5 button-4 rounded-[58px]">
               inhouse Technology
             </li>
           </ul>
@@ -828,7 +829,7 @@ const page = () => {
                     src="/assets/images/service-animation-02.png"
                     width={244}
                     height={154}
-                    style={{ height: "237px" }}
+                    // style={{ height: "237px" }}
                     alt=""
                   />
                 </div>
@@ -857,7 +858,7 @@ const page = () => {
                     width={276}
                     height={169}
                     className="mt-11"
-                    style={{ height: "168px" }}
+                    // style={{ height: "168px" }}
                     alt=""
                   />
                 </div>
@@ -886,7 +887,7 @@ const page = () => {
                     width={218}
                     height={79}
                     className="mt-11"
-                    style={{ height: "128px" }}
+                    // style={{ height: "128px" }}
                     alt=""
                   />
                 </div>
@@ -915,7 +916,7 @@ const page = () => {
                     width={129}
                     height={133}
                     className="mt-11"
-                    style={{ height: "150px" }}
+                    // style={{ height: "150px" }}
                     alt=""
                   />
                 </div>
@@ -926,7 +927,7 @@ const page = () => {
       </div>
 
       {/* <!-- Our Work--> */}
-      <div className="px-48 my-48 relative flyCardStacks" ref={main2}>
+      <div className="px-48 my-48 relative flyCardStacks"  >
         <div className="flex items-center justify-between">
           <div>
             <p className="text-[#171A46] text-[180px] font-black">Our</p>
@@ -940,18 +941,20 @@ const page = () => {
                 src="/assets/images/westpoint-image.png"
                 width={487}
                 height={326}
+                alt=""
               />
               <p className="text-[16px] text-white mt-[48px]">
                 Choose Expobird as your digital marketing agency and propel your
                 business to new heights
               </p>
               <p className="text-[48px] text-white font-semibold">+300%</p>
-              <div class="flex justify-end">
+              <div className="flex justify-end">
                 <Image
                   src="/assets/images/arrow-black.png"
                   width={28}
                   height={28}
                   className="invert brightness-0"
+                  alt=""
                 />
               </div>
             </div>
@@ -960,6 +963,7 @@ const page = () => {
                 src="/assets/images/westpoint-image2.png"
                 width={280}
                 height={240}
+                alt=""
               />
               <p className="text-[60px] font-semibold text-[#391952] leading-none mt-[32px]">
                 Set up your Swag Spend Account and instantly set up your digital
@@ -971,6 +975,7 @@ const page = () => {
                 src="/assets/images/westpoint-image3.png"
                 width={280}
                 height={240}
+                alt=""
               />
               <p className="text-[60px] font-semibold text-[#391952] leading-none mt-[32px]">
                 Spend and save on Cashback offers and in the Swag store.
@@ -981,6 +986,7 @@ const page = () => {
                 src="/assets/images/westpoint-image4.png"
                 width={280}
                 height={240}
+                alt=""
               />
               <p className="text-[60px] font-semibold text-[#391952] leading-none mt-[32px]">
                 Receive your physical Swag Visa Debit card in the mail after 5-7
@@ -995,7 +1001,7 @@ const page = () => {
       </div>
 
       {/* <!-- In House Technology --> */}
-      <div ref={main3}>
+      <div  >
         <div className="grid grid-cols-2 items-center gap-x-24 px-48">
           <div>
             <p className="text-[80px] text-[#171A46] font-black leading-none">
@@ -1020,12 +1026,13 @@ const page = () => {
         <div className="technology-gradient pt-96">
           <div className="grid grid-cols-2 items-center gap-x-24 px-48">
             <div className="w-[749px] h-[598px]">
-              {/* <Image
+              <Image
                 src="/assets/images/benefits.webp.png"
                 width={749}
                 height={598}
                 alt=""
-              /> */}
+                
+              />
             </div>
             <div>
               <p className="text-[80px] text-white font-black leading-none">
@@ -1093,9 +1100,7 @@ const page = () => {
                   width={12}
                   height={12}
                   className="inline invert brightness-0"
-                  alt=""
-                  srcset=""
-                />
+                  alt=""/>
               </span>
             </button>
           </div>
@@ -1199,7 +1204,7 @@ const page = () => {
       </div>
 
       {/* <!-- Pay as --> */}
-      <div className="numbers-gradient py-48 text-animation1" ref={main4}>
+      <div className="numbers-gradient py-48 text-animation1"  >
         <div className="grid grid-flow-row grid-cols-4">
           <div className="col-span-2 col-start-1 ml-[100px]">
             <p className="text-white font-black text-[250px] textAnimation1">Pay as</p>
@@ -1216,7 +1221,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="numbers-gradient py-48 text-animation2" ref={main4}>
+      <div className="numbers-gradient py-48 text-animation2"  >
         <div className="grid grid-flow-row grid-cols-4">
           <div className="col-span-3 col-start-2">
             <p className="text-white font-black text-[250px] textAnimation3">Effortless</p>
@@ -1233,7 +1238,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="numbers-gradient py-48 text-animation3" ref={main4}>
+      <div className="numbers-gradient py-48 text-animation3"  >
         <div className="grid grid-flow-row grid-cols-4">
           <div className="col-span-3 col-start-1 ml-[100px]">
             <p className="text-white font-black text-[250px] textAnimation5">All sales</p>
@@ -1250,7 +1255,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="numbers-gradient py-48 text-animation4" ref={main4}>
+      <div className="numbers-gradient py-48 text-animation4"  >
         <div className="grid grid-flow-row grid-cols-4">
           <div className="col-span-3 col-start-2">
             <p className="text-white font-black text-[250px] textAnimation7">Secure by</p>
@@ -1275,9 +1280,7 @@ const page = () => {
           width={1120}
           height={551}
           className="mx-auto"
-          alt=""
-          srcset=""
-        />
+          alt=""/>
         <div className="flex gap-x-[20px] justify-center mt-[50px] mb-[100px]">
           <div className="w-[70px] h-[70px] rounded-full bg-[#5D6BD9] flex justify-center items-center">
             <Image
