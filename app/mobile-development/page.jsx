@@ -9,7 +9,7 @@ import Script from 'next/script';
 // import '@scripts/script-static-page-1.js';
 
 export const metadata = {
-    title : "Mobile Development",
+    title : "Mobile Development - Expobird",
     description : "nextJs demo Application"
 }
 
