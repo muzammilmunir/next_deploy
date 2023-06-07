@@ -680,7 +680,7 @@ const page = (props) => {
                 services and proprietary technology platform.
               </p>
               <button className="bg-[#BA83E1] rounded-[58px] py-4 px-6 text-white text-base font-medium">
-                inhouse Technology{" "}
+                inhouse Technology
                 <span>
                   <Image
                     src="/assets/images/arrow-black.png"
@@ -1031,7 +1031,7 @@ const page = (props) => {
                 width={749}
                 height={598}
                 alt=""
-                
+
               />
             </div>
             <div>

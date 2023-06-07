@@ -58,7 +58,7 @@ const page2 = ({title,description}) => {
                 <Image src="/assets/images/mobiles3.png" width={320} height={369} alt=""/>
             </div>
             <div className="w-[427px] h-[427px] bg-[#FED44B] rounded-[34px] -rotate-[6.62deg] flex items-center justify-center jcard4">
-                <Image src="/assets/images/mobiles4.png" width={320} height={338} alt=""/>
+                <Image src="/assets/images/mobiles4.png" width={320} height={339} alt=""/>
             </div>
         </div>
     </div>
@@ -87,7 +87,7 @@ const page2 = ({title,description}) => {
                             <p className="text- text-[#878787] text-2xl my-5">Want to reach a wide audience?
                                 We get that and we will gladly help.</p>
                             <button className="p-6 border border-[#ADADAD] rounded-[16px]"><span><Image src="/assets/images/arrow-black.png" width={12} height={12} className="scale-75" alt=""/></span></button>
-                            <Image src="/assets/images/service-animation-03.png" width={244} height={154} className="mt-11" alt=""/>
+                            <Image src="/assets/images/service-animation-03.png" width={244} height={171} className="mt-11" alt=""/>
                         </div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ const page2 = ({title,description}) => {
                             <p className="text-[#5B5B5B] text-3xl font-bold">iOS Development</p>
                             <p className="text- text-[#878787] text-2xl my-5">This means that if you aim to enter the world of Apple apps</p>
                             <button className="p-6 border border-[#ADADAD] rounded-[16px]"><span><Image src="/assets/images/arrow-black.png" width={12} height={12} className="scale-75" alt=""/></span></button>
-                            <Image src="/assets/images/service-animation-02.png" width={240} height={168} alt=""/>
+                            <Image src="/assets/images/service-animation-02.png" width={240} height={151} alt=""/>
                         </div>
                     </div>
                     <div className="px-6 py-20">
@@ -105,7 +105,7 @@ const page2 = ({title,description}) => {
                             <p className="text-[#5B5B5B] text-3xl font-bold">Custom <br/> Development</p>
                             <p className="text- text-[#878787] text-2xl my-5">Crafting engaging and flawless custom mobile apps is in our blood.</p>
                             <button className="p-6 border border-[#ADADAD] rounded-[16px]"><span><Image src="/assets/images/arrow-black.png" width={12} height={12} className="scale-75" alt=""/></span></button>
-                            <Image src="/assets/images/service-animation-04.png" width={276} height={169} className="mt-11" alt=""/>
+                            <Image src="/assets/images/service-animation-04.png" priority={false} width={276} height={169} className="mt-11" alt=""/>
                         </div>
                     </div>
             </div>
