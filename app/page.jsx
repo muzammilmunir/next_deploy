@@ -927,7 +927,7 @@ const page = (props) => {
       </div>
 
       {/* <!-- Our Work--> */}
-      <div className="px-48 my-48 relative flyCardStacks"  >
+      <div className="px-48 my-48 relative flyCardStacks">
         <div className="flex items-center justify-between">
           <div>
             <p className="text-[#171A46] text-[180px] font-black">Our</p>

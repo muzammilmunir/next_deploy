@@ -29,12 +29,12 @@ const Nav = () => {
                 </div>
                 <div className="ml-auto">
                     <ul className="flex items-center">
-                        <li className="text-white text-base font-semibold mr-20">Casestudies</li>
-                        <li className="text-white text-base font-semibold mr-20">Services</li>
-                        <li className="text-white text-base font-semibold mr-20">About us</li>
-                        <li className="text-white text-base font-semibold mr-20">Blogs</li>
-                        <li className="text-white text-base font-semibold mr-20">Resources</li>
-                        <li className="text-white text-base font-semibold mr-32">Contact us</li>
+                        <li className="text-white text-base font-semibold mr-20"><Link href="/seo">Seo</Link></li>
+                        <li className="text-white text-base font-semibold mr-20"><Link href="/mobile-development">Apps</Link></li>
+                        <li className="text-white text-base font-semibold mr-20"><Link href="/digital-marketing">Digital</Link></li>
+                        <li className="text-white text-base font-semibold mr-20"><Link href="/artificial-intelligence">AI</Link></li>
+                        {/* <li className="text-white text-base font-semibold mr-20">Resources</li>
+                        <li className="text-white text-base font-semibold mr-32">Contact us</li> */}
                         <button className="bg-[#FF9E44] text-[#171B47] text-base px-12 py-5 rounded-[40px] font-bold">Let’s Talk <span><Image src="/assets/images/send.png" width={18} height={17} className="inline" alt=""/></span></button>
                     </ul>
                 </div>
